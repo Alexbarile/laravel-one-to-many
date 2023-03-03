@@ -7,6 +7,7 @@ use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 // MODEL
 use App\Models\Post;
+use App\Models\Type;
 
 class PostController extends Controller
 {
