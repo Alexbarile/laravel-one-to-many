@@ -27,7 +27,6 @@
                         <div class="text-danger">{{$message}}</div>
                         @enderror
                     </div>
-
                     <div class="form-group m-2">
                         <label class="fs-2 fw-semibold" for="type_id">Categorie</label>
                         <select class="form-control" name="type_id" id="type_id">
