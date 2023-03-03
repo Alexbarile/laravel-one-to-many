@@ -28,6 +28,21 @@
                         <div class="text-danger">{{$message}}</div>
                         @enderror
                     </div>
+                    <div class="form-group m-2">
+                        <label class="fs-2 fw-semibold" for="type_id">Categorie</label>
+                        <select class="form-control" name="type_id" id="type_id">
+                            <option value="">Seleziona categoria</option>
+                            @foreach ($types as $type)
+                            <option value="{{$type->id}}"
+                                {{$type->id == old('type_id', $post->type_id) ? 'selected' : ''}}>
+                                {{$type->name}}
+                            </option>  
+                            @endforeach
+                        </select>
+                        @error('type_id')
+                        <div class="text-danger">{{$message}}</div>
+                        @enderror
+                    </div>
                     <button type="submit" class="btn btn-success">Salva</button>
                 </form>
             </div>
