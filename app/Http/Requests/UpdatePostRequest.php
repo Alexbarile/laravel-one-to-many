@@ -29,6 +29,7 @@ class UpdatePostRequest extends FormRequest
         return [
             'title'=> ['required', Rule::unique('posts')->ignore($this->post), 'max:150'],
             'content'=> ['nullable'],
+            'type_id'=> ['nullable', 'exists:types,id']
         ];
     }
 
@@ -38,6 +39,7 @@ class UpdatePostRequest extends FormRequest
             'title.required'=> 'Il titolo è obbligatorio',
             'title.unique'=> 'Il titolo è già presente',
             'title.max'=> 'Il titolo non può superare :max caratteri',
+            'type_id'=> 'Categoria non è valida'
         ];
     }
 }
