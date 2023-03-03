@@ -18,6 +18,7 @@
             <p><strong>Slug:</strong> {{$post->slug}}</p>
             <label class="d-block" for=""></label>
             <p><strong>Contenuto:</strong> {{$post->content}}</p>
+            <p><strong>Categoria:</strong> {{$post->type ? $post->type->name : 'Senza categoria'}}</p>
         </div>
     </div>
 </div>
