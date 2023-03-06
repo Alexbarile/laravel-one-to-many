@@ -31,7 +31,7 @@
                     <div class="form-group m-2">
                         <label class="fs-2 fw-semibold" for="type_id">Categorie</label>
                         <select class="form-control" name="type_id" id="type_id">
-                            <option value="">Seleziona categoria</option>
+                            <option value="disabled selected">Seleziona categoria</option>
                             @foreach ($types as $type)
                             <option value="{{$type->id}}"
                                 {{$type->id == old('type_id', $post->type_id) ? 'selected' : ''}}>
